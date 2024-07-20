@@ -21,7 +21,7 @@ class _ExpensesState extends State<Expenses>
   @override
   Widget build(context)
   {
-    return Scaffold();
+return Scaffold();
   }
 
 }
