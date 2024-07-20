@@ -1,0 +1,6 @@
+# Override language detection for Dart
+*.dart linguist-language=Dart
+*.yaml linguist-language=YAML
+CMakeLists.txt linguist-language=ignored
+*.cpp linguist-language=ignored
+*.h linguist-language=ignored
