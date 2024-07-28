@@ -26,28 +26,34 @@ class _ExpensesState extends State<Expenses> {
         category: Category.other)
   ];
 
+  void _openAddExpenseOverlay() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => const Text('Modal Bottom sheet'),
+    );
+  }
+
   @override
   Widget build(context) {
     return Scaffold(
-      appBar: AppBar(actions: [IconButton(onPressed: (){}, icon: const Icon(Icons.add))],),
-        body: Column(
-          children: [
-                      const Text('The Chart'),
-
-            Expanded(
-              child: ExpensesList(
-                expenses: _registeredExpenses,
-              ),
+      appBar: AppBar(
+        actions: [IconButton(onPressed: _openAddExpenseOverlay, icon: const Icon(Icons.add))],
+        centerTitle: true,
+        title:  Text('Expense Tracker',style: GoogleFonts.abrilFatface(color: Colors.white),),
+      ),
+      body: Column(
+        children: [
+          const Text('The Chart'),
+          Expanded(
+            child: ExpensesList(
+              expenses: _registeredExpenses,
             ),
-          ],
-        ),
-      );
-    }
-       
-       
-    
-    
+          ),
+        ],
+      ),
+    );
   }
+}
 
 
 
