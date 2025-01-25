@@ -40,7 +40,7 @@ class _ExpensesState extends State<Expenses> {
       appBar: AppBar(
         actions: [IconButton(onPressed: _openAddExpenseOverlay, icon: const Icon(Icons.add))],
         centerTitle: true,
-        title:  Text('Expense Tracker',style: GoogleFonts.abrilFatface(color: Color.fromARGB(255, 16, 225, 79)),),
+        title:  Text('Expense Tracker',style: GoogleFonts.abrilFatface(color: const Color.fromARGB(255, 16, 225, 79)),),
       ),
       body: Column(
         children: [
